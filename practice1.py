@@ -2,7 +2,7 @@
 import time
 name= input("Enter your name: ")
 print("welcome to adventure",name )
-answer= input("you are in forest and the road is going to be end so you have to turn right or left(right/left): ")
+answer= input("you are in forest and the road is going to be end, so you have to turn right or left(right/left): ")
 if answer=="right":
     answer=input("now you standing in front of Bear.... if you want to save? ok then climb a tree or else you will lose your life(yes/no): ")
     if answer=="yes":
@@ -40,21 +40,3 @@ elif answer=="left":
 else:
     print("you enter the wrong choice you lost the game")
 
-#GENERATORS IN PYTHON
-from numpy import *
-def prime():
-    num=2
-    while True:
-        prime=False
-        for i in arange(2,(num**0.5)+1):
-                if num%i==0 and num!=2:
-                    prime=True
-                    break
-        if not prime:
-            yield num
-        num+=1
-for n in prime():
-    if n>100:
-        break
-    print(n)
-    
